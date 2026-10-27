@@ -1,3 +1,9 @@
+---
+layout: single
+title: Home
+permalink : /
+---
+
 <html>
 <head>
     <title>Visualización de Datos: PEC2.3</title>
