@@ -17,24 +17,22 @@
             <h2> Visualización de Datos / PEC 2 / Tercera práctica: Hypertree </h2>
             <p> Descripción de la visualización </p>
         </div>
-        <div>
-            <p id=tree-holder>
-            </p>
-            <script>
-                const placeholder = document.getElementByID('tree-holder');
-                const ht = new hyt.Hypertree(
-                    {
-                        parent: placeholder             
-                    },
-                    {
-                        dataloader: hyt.loaders.fromFile('mammalia.d3.json'),
-                        langInitBFS: (ht, n)=> n.precalc.label = n.data.name,
-                    }
-                )
-                ht.initPromise
-                    .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
-                    .then(()=> ht.drawDetailFrame())
-            </script>
-        </div>
+        <p id=tree-holder>
+        </p>
+        <script>
+            const placeholder = document.getElementByID('tree-holder');
+            const ht = new hyt.Hypertree(
+                {
+                    parent: placeholder             
+                },
+                {
+                    dataloader: hyt.loaders.fromFile('mammalia.d3.json'),
+                    langInitBFS: (ht, n)=> n.precalc.label = n.data.name,
+                }
+            )
+            ht.initPromise
+                .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
+                .then(()=> ht.drawDetailFrame())
+        </script>
     </body>
 </html>
