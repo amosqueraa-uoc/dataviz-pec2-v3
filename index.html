@@ -12,6 +12,11 @@
     <script src="d3-hypertree.js"></script>
     </head>
     <body>
+        <div></div>
+        <h1>Título de la visualización</h1>
+        <h2> Visualización de Datos / PEC 2 / Tercera práctica: Hypertree </h2>
+        <p> Descripción de la visualización </p>
+        <div>
         <script>            
             const ht = new hyt.Hypertree(
                 {
@@ -26,5 +31,6 @@
                 .then(()=> new Promise((ok, err)=> ht.animateUp(ok, err)))            
                 .then(()=> ht.drawDetailFrame())
         </script>
+        </div>
     </body>
 </html>
