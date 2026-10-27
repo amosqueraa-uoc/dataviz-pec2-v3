@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="d3-hypertree-light.css" id="ldswitch">        
 
     <script src="d3-hypertree.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
     </head>
     <body>
         <div>
@@ -22,13 +21,12 @@
         </div>
         <script>
             const placeholder = document.getElementById('tree-holder');
-            const data = d3.json('german_municipalities.json');
             const ht = new hyt.Hypertree(
                 {
                     parent: placeholder             
                 },
                 {
-                    dataloader: ok=> ok(d3.hierarchy(data))
+                    dataloader: hyt.loaders.fromFile('german_municipalities.json')
                 }
             )
             ht.initPromise
