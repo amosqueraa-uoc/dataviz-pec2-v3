@@ -1,7 +1,3 @@
-layout: page
-title: "Home"
-permalink: /dataviz-pec2-v3/home
-
 <html>
 <head>
     <title>Visualización de Datos: PEC2.3</title>
