@@ -16,11 +16,11 @@
         <h1>Título de la visualización</h1>
         <h2> Visualización de Datos / PEC 2 / Tercera práctica: Hypertree </h2>
         <p> Descripción de la visualización </p>
-        <div>
+        <div id=tree-container>
         <script>            
             const ht = new hyt.Hypertree(
                 {
-                    parent: document.body             
+                    parent: tree-container             
                 },
                 {
                     dataloader: hyt.loaders.fromFile('mammalia.d3.json'),
